@@ -1,0 +1,24 @@
+.welcome_title{
+  font: var(--sans);
+  font-size: 10vh;
+  border-bottom: 2px solid #136fc5;
+}
+.container{
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button{
+  font-size: 5vh;
+  text-transform: uppercase;
+  padding: 10px;
+  background-color: azure;
+  border: 1px solid #b1acac;
+  border-radius: 8px;
+}
+
+.button:active{
+   background-color: rgb(193, 250, 250);
+}

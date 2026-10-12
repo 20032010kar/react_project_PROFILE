@@ -1,0 +1,150 @@
+/* Базові змінні та шрифти */
+.user-card {
+  --primary-color: #6366f1;
+  --primary-hover: #4f46e5;
+  --bg-color: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --border-color: #f3f4f6;
+  
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  width: 100%;
+  max-width: 340px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(99, 102, 241, 0.15);
+}
+
+/* Шапка картки (Фото, Ім'я, ID) */
+.user-card__header {
+  padding: 24px 24px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.user-card__avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.user-card__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Зелений індикатор активності (опціонально) */
+.user-card__status {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 14px;
+  height: 14px;
+  background-color: #10b981;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.user-card__main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow: hidden;
+}
+
+.user-card__name {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-card__id {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: monospace;
+  background: #f9fafb;
+  padding: 2px 8px;
+  border-radius: 6px;
+  width: fit-content;
+  border: 1px solid var(--border-color);
+}
+
+/* Основний вміст (Вік та інші поля) */
+.user-card__body {
+  padding: 16px 24px;
+}
+
+.user-card__info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 0.95rem;
+}
+
+.user-card__label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.user-card__value {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* Футер з кнопками дій */
+.user-card__footer {
+  padding: 16px 24px 24px;
+  display: flex;
+  gap: 10px;
+}
+
+.user-card__btn {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  border: none;
+}
+
+.user-card__btn:active {
+  transform: scale(0.97);
+}
+
+.user-card__btn--primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.user-card__btn--primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.user-card__btn--secondary {
+  background-color: #f3f4f6;
+  color: var(--text-main);
+}
+
+.user-card__btn--secondary:hover {
+  background-color: #e5e7eb;
+}
